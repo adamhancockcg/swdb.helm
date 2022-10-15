@@ -1,9 +1,10 @@
-name: Release Charts
+name: Release Web Chart
 
 on:
+  workflow_dispatch: {}
   push:
-    branches:
-      - main
+    paths:
+      - "web/Chart.yml"
 
 jobs:
   release:
@@ -13,8 +14,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
 
       - name: Configure Git
         run: |
@@ -28,5 +27,7 @@ jobs:
 
       - name: Run chart-releaser
         uses: helm/chart-releaser-action@v1.4.1
+        with:
+          charts_dir: web
         env:
           CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
