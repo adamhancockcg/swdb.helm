@@ -4,7 +4,7 @@ on:
   workflow_dispatch: {}
   push:
     paths:
-      - "web/Chart.yml"
+      - "charts/*"
 
 jobs:
   release:
@@ -27,7 +27,5 @@ jobs:
 
       - name: Run chart-releaser
         uses: helm/chart-releaser-action@v1.4.1
-        with:
-          charts_dir: web
         env:
           CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
