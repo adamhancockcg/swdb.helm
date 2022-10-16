@@ -1,4 +1,4 @@
-name: Release Web Chart
+name: Release Charts
 
 on:
   workflow_dispatch: {}
@@ -14,9 +14,4 @@ jobs:
       - name: Publish Helm charts
         uses: stefanprodan/helm-gh-pages@master
         with:
-          version: v3.10.0
-
-      - name: Run chart-releaser
-        uses: helm/chart-releaser-action@v1.4.1
-        env:
-          CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+          token: ${{ secrets.GITHUB_TOKEN }}
