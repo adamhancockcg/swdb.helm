@@ -3,15 +3,25 @@ entries:
   web:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-10-16T14:02:23.567712751Z"
+    created: "2022-10-16T16:35:33.363992563Z"
     description: A Helm chart for Kubernetes
-    digest: 64054ca9bd26902b2fd636d2803806efe58ae9d8585a523f0f06100987265fd5
+    digest: c4e0df5d0eeccc4e7023ba25fe5bfdf2e5e0967403117408c1aaaf562b34ed57
     name: web
     type: application
     urls:
     - https://adamhancockcg.github.io/swdb.helm/web-0.1.6.tgz
     version: 0.1.6
   worker:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-10-16T16:35:33.364222367Z"
+    description: A Helm chart for Kubernetes
+    digest: e7631daab761c86de6a8a4476f3001c70d1d5260d2b548c2d9fa01d3e696014a
+    name: worker
+    type: application
+    urls:
+    - https://adamhancockcg.github.io/swdb.helm/worker-0.1.8.tgz
+    version: 0.1.8
   - apiVersion: v2
     appVersion: 1.16.0
     created: "2022-10-16T14:02:23.567915955Z"
@@ -22,4 +32,4 @@ entries:
     urls:
     - https://adamhancockcg.github.io/swdb.helm/worker-0.1.7.tgz
     version: 0.1.7
-generated: "2022-10-16T14:02:23.567052736Z"
+generated: "2022-10-16T16:35:33.36326845Z"
