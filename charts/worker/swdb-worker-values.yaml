@@ -2,7 +2,7 @@ jobs:
   # first cron
   - name: swdb-worker
     image:
-      repository: ghcr.io/adamhancockcg/swdb.app/swdb-worker:latest
+      repository: ghcr.io/adamhancockcg/swdb.app/swdb-worker
       tag: latest
       imagePullPolicy: Always
     schedule: "0 * * * *"
